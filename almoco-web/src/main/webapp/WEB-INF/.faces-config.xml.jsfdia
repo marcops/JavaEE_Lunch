@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#login.xhtml" PATH="/login.xhtml"
+  SHAPE="88,176,50,57" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#login.xhtml:0" NAME="item"
+   PATH="/login.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#voteRestaurant.xhtml"
+    NAME="output" PATH="/voteRestaurant.xhtml"
+    TARGET="rules:#voteRestaurant.xhtml" TITLE="success" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="alreadyVoted::#result.xhtml" NAME="output1"
+    PATH="/result.xhtml" TARGET="rules:#result.xhtml"
+    TITLE="alreadyVoted" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#login.xhtml:1" NAME="item1"
+   PATH="/login.xhtml" SHAPE="112,238,47,15" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="failure::#login.xhtml" NAME="output"
+    PATH="/login.xhtml" TARGET="rules:#login.xhtml" TITLE="failure" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#voteRestaurant.xhtml"
+  PATH="/voteRestaurant.xhtml" SHAPE="280,200,50,41" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#voteRestaurant.xhtml:0" NAME="item"
+   PATH="/voteRestaurant.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#result.xhtml" NAME="output"
+    PATH="/result.xhtml" TARGET="rules:#result.xhtml" TITLE="success" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#result.xhtml" PATH="/result.xhtml"
+  SHAPE="344,312,50,25" model-entity="JSFProcessGroup" persistent="true"/>
+</PROCESS>

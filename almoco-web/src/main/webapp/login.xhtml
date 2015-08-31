@@ -1,0 +1,27 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>ejb-in-ear</title>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <div id="container">
+        <h:form id="response" onsubmit="#{loginMBean.login()}">
+            <h:panelGrid columns="2">
+                <h:outputLabel>Name:</h:outputLabel>
+               <h:inputText value="#{loginMBean.name}" />
+                  <h:outputLabel>Passwprd:</h:outputLabel>
+               <h:inputSecret value="#{loginMBean.password}" />
+            </h:panelGrid>
+             <h:commandButton value="Login" action="#{loginMBean.login}"></h:commandButton>
+        </h:form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:body>
+
+	<h1>Onde voce quer almocar?</h1>
+	<div id="container">
+		<h:form>
+			<h:panelGrid columns="2">
+				<h:outputText value="Restaurante"></h:outputText>
+
+
+				<h:selectOneMenu value="#{voteRestaurantMB.restaurantsInString}">
+					<f:selectItems value="#{voteRestaurantMB.restaurant}" var="f"
+						itemLabel="#{f.name}" itemValue="#{f.value}" />
+				</h:selectOneMenu>
+
+			</h:panelGrid>
+			<h:commandButton value="Votar" action="#{voteRestaurantMB.vote}"></h:commandButton>
+		</h:form>
+	</div>
+
+</h:body>
+
+</html>
